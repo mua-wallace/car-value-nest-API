@@ -1,13 +1,29 @@
-## create a new user
-
+### create a new user
 
 POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email": "wallace@gmail.com",
+    "email": "walliz@gmail.com",
     "password": "Password@123"
 }
+
+### sign in an existing user
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "walliz@gmail.com",
+    "password": "Password@123"
+}
+
+### Get the currrently login user
+
+GET http://localhost:3000/auth/whoami
+
+### signout the currrently login user
+
+POST  http://localhost:3000/auth/signout
 
 
 ### find a particular user with given ID
@@ -22,7 +38,7 @@ GET  http://localhost:3000/auth?email=wallace@gmail.com
 
 ### Delete user
 
-DELETE   http://localhost:3000/auth/1
+DELETE   http://localhost:3000/auth/9
 
 ### Update user
 
